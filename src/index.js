@@ -10,7 +10,7 @@ function SolveSudokuGame(matrix) {
         col = 0;
 
     if (!FindZeroLocation(matrix, row, col)) {
-        return true; // success!  
+        return true;
     }
     row = a1;
     col = b1;
@@ -34,6 +34,8 @@ function FindZeroLocation(matrix,
     for (row = 0; row < N; row++)
         for (col = 0; col < N; col++)
             if (matrix[row][col] == 0) {
+                a1 = row;
+                b1 = col;
                 return true;
             }
     a1 = row;
